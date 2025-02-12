@@ -11,15 +11,15 @@
 - **Secure Authentication**: OAuth, JWT-based authentication, and 2FA.
 
 ## Tech Stack
-- **Frontend**: Next.js, React, TypeScript
-- **Backend**: NestJS, PostgreSQL, Redis
+- # **Frontend**: Next.js, React, TypeScript
+- # **Backend**: NestJS, PostgreSQL, Redis
 - **Blockchain Integration**: Ethers.js, Web3.js, Binance API, CCXT
 - **AI & ML**: TensorFlow.js for market predictions
 - **Messaging & Notifications**: WebSockets, BullMQ, Telegram bot, email alerts
 
 ## Installation
 ```bash
-git clone https://github.com/your-repo/cipherdash.git
+https://github.com/gxddvn/CipherDash.git
 cd cipherdash
 npm install
 ```
