@@ -10,6 +10,9 @@ export default {
     extend: {
       colors: {
         background: "var(--background)",
+        backgroundSecondary: "var(--background-side)",
+        mainBgColor: "var(--main-bg-color)",
+        borderColor: "var(--border-color)",
         foreground: "var(--foreground)",
       },
     },
