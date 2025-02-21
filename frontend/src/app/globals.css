@@ -10,6 +10,10 @@
   --background-side: #FFFFFF;
   --border-color: #E6EFF5;
   --main-bg-color: #1814F3;
+  --second-color: #B1B1B1;
+  --black-color: #232323;
+  --input-color: #41D4A8;
+  --output-color: #FF4B4A;
   /* --foreground: #171717; */
   --foreground: #343C6A;
 }
@@ -26,8 +30,14 @@
   padding: 0;
   box-sizing: border-box;
   /* user-select: none; */ 
-  font-size: clamp(0.5rem, 1.2vw, 3rem);
+  /* font-size: clamp(0.5rem, 1vw + 1em, 3rem) ; */
+  font-size: clamp(0.5rem, 1.2vw, 3rem) ;
   /* font-size: clamp(0.75rem, 1vw, 1.5rem); */
+}
+
+tspan, text, .recharts-default-tooltip p, .recharts-default-tooltip span {
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 img {
