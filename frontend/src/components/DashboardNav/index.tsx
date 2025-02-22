@@ -1,4 +1,5 @@
 import { AnalyticsIcon, DashboardIcon, NotifyIcon, SettingsIcon, SubscriptionsIcon, TradingBotIcon, TransactionIcon, WalletsIcon } from '@/app/icons'
+import Link from 'next/link'
 import React from 'react'
 
 const DashboardNav = () => {
@@ -7,10 +8,10 @@ const DashboardNav = () => {
             <h1 className='text-2xl font-extrabold px-6 py-5 text-center mb-6'>CipherDash</h1>
             <div className='flex flex-col pr-5'>
                 <div className='flex items-center cursor-pointer py-3 border-l-4 border-mainBgColor rounded-sm'>
-                    <span className='flex flex-grow items-center mr-1 text-xs font-medium pl-10 text-mainBgColor'> <DashboardIcon className='w-5 h-5 mr-5'/> Dashboard</span>
+                    <Link href="/dashboard" className='flex flex-grow items-center mr-1 text-xs font-medium pl-10 text-mainBgColor'> <DashboardIcon className='w-5 h-5 mr-5'/> Dashboard</Link>
                 </div>
                 <div className='flex items-center cursor-pointer text-secondColor py-3 rounded-sm transition-all ease-linear  hover:bg-mainBgColor hover:text-backgroundSecondary'>
-                    <span className='flex flex-grow items-center mr-1 text-xs font-medium pl-10'><WalletsIcon className='w-5 h-5 mr-5'/> Wallets</span>
+                    <Link href="/dashboard/wallets" className='flex flex-grow items-center mr-1 text-xs font-medium pl-10'><WalletsIcon className='w-5 h-5 mr-5'/> Wallets</Link>
                 </div>
                 <div className='flex items-center cursor-pointer text-secondColor py-3 rounded-sm transition-all ease-linear hover:bg-mainBgColor hover:text-backgroundSecondary'>
                     <span className='flex flex-grow items-center mr-1 text-xs font-medium pl-10'><TransactionIcon className='w-5 h-5 mr-5'/> Transactions</span>

@@ -36,7 +36,7 @@ const WeeklyActivityChart = ({ className }: { className?: string }) => {
             <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={data} barGap={8}>
                     <XAxis stroke='#343C6A' dataKey="day" />
-                    <Tooltip contentStyle={{ fontSize: "6px !important" }} />
+                    <Tooltip />
                     <Bar dataKey="deposit" fill="#1814F3" radius={[4, 4, 0, 0]} />
                     <Bar 
                         dataKey="withdraw" 
