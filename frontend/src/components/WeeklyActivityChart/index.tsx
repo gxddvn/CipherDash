@@ -30,9 +30,9 @@ const CustomBar = (props: any) => {
     );
 };
 
-const WeeklyActivityChart = ({ className }: { className?: string }) => {
+const WeeklyActivityChart = ({ className, style }: { className?: string, style?: React.CSSProperties }) => {
     return (
-        <div className={className}>
+        <div className={className} style={style}>
             <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={data} barGap={8}>
                     <XAxis stroke='#343C6A' dataKey="day" />
