@@ -18,6 +18,7 @@ export default {
         blackColor: "var(--black-color)", 
         inputColor: "var(--input-color)",
         outputColor: "var(--output-color)",
+        noFocusColor: "var(--no-focus-color)",
       },
     },
   },

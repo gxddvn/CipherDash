@@ -14,7 +14,7 @@ const DashboardNav = () => {
                     <Link href="/dashboard/wallets" className='flex flex-grow items-center mr-1 text-xs font-medium pl-10'><WalletsIcon className='w-5 h-5 mr-5'/> Wallets</Link>
                 </div>
                 <div className='flex items-center cursor-pointer text-secondColor py-3 rounded-sm transition-all ease-linear hover:bg-mainBgColor hover:text-backgroundSecondary'>
-                    <span className='flex flex-grow items-center mr-1 text-xs font-medium pl-10'><TransactionIcon className='w-5 h-5 mr-5'/> Transactions</span>
+                    <Link href="/dashboard/transactions" className='flex flex-grow items-center mr-1 text-xs font-medium pl-10'><TransactionIcon className='w-5 h-5 mr-5'/> Transactions</Link>
                 </div>
                 <div className='flex items-center cursor-pointer text-secondColor py-3 rounded-sm transition-all ease-linear hover:bg-mainBgColor hover:text-backgroundSecondary'>
                     <span className='flex flex-grow items-center mr-1 text-xs font-medium pl-10'><AnalyticsIcon className='w-5 h-5 mr-5'/> AI Analytics</span>
@@ -29,7 +29,7 @@ const DashboardNav = () => {
                     <span className='flex flex-grow items-center mr-1 text-xs font-medium pl-10'><SubscriptionsIcon className='w-5 h-5 mr-5'/> Subscriptions</span>
                 </div>
                 <div className='flex items-center cursor-pointer text-secondColor py-3 rounded-sm transition-all ease-linear hover:bg-mainBgColor hover:text-backgroundSecondary'>
-                    <span className='flex flex-grow items-center mr-1 text-xs font-medium pl-10'><SettingsIcon className='w-5 h-5 mr-5'/> Settings</span>
+                    <Link href="/dashboard/settings" className='flex flex-grow items-center mr-1 text-xs font-medium pl-10'><SettingsIcon className='w-5 h-5 mr-5'/> Settings</Link>
                 </div>
             </div>
         </div>

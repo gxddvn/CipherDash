@@ -1,4 +1,3 @@
-import WeeklyActivityChart from "@/components/WeeklyActivityChart";
 import { EllipsisHorizontal } from "../icons";
 import Charts from "./charts";
 
