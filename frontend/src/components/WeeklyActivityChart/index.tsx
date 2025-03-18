@@ -1,6 +1,6 @@
 "use-client";
 
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend, CartesianGrid, Rectangle } from 'recharts';
+import { BarChart, Bar, XAxis, Tooltip, ResponsiveContainer, Rectangle } from 'recharts';
 
 const data = [
     { day: 'Sat', deposit: 500, withdraw: 300 },
@@ -12,9 +12,18 @@ const data = [
     { day: 'Fri', deposit: 380, withdraw: 270 },
 ];
 
-const CustomBar = (props: any) => {
-    const { x, y, width, height, payload } = props;
-    const fillColor = payload.withdraw >= 0 ? "#41D4A8" : "#FF4B4A"; // Цвет по значению
+interface CustomBarInterface {
+    x?: number | undefined 
+    y?: number | undefined 
+    width?: number | undefined
+    height?: number | undefined
+    payload?: {
+        withdraw: number;
+    } | undefined
+}
+
+const CustomBar = ({ x, y, width, height, payload }: CustomBarInterface) => {
+    const fillColor = (payload?.withdraw ?? 0) >= 0 ? "#41D4A8" : "#FF4B4A";
 
     return (
         <Rectangle
