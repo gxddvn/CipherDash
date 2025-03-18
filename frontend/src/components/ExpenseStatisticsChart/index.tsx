@@ -8,10 +8,10 @@ const expenseData = [
 ];
 
 const RADIAN = Math.PI / 180;
-const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }: { cx: number, cy: number, midAngle: number, innerRadius: number, outerRadius: number, percent: number, index: number }) => {
-  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-  const x = cx + radius * Math.cos(-midAngle * RADIAN);
-  const y = cy + radius * Math.sin(-midAngle * RADIAN);
+const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent }: { cx: number, cy: number, midAngle: number, innerRadius: number, outerRadius: number, percent: number }) => {
+    const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+    const x = cx + radius * Math.cos(-midAngle * RADIAN);
+    const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
     return (
         <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
@@ -32,9 +32,9 @@ const ExpenseStatisticsChart = ({ className }: { className?: string }) => {
                     cx="50%"
                     cy="50%"
                     outerRadius={90}
-                    innerRadius={0} // Adjusted to create a donut shape
-                    label={renderCustomizedLabel} // Custom label
-                    labelLine={false} // Hide the label line
+                    innerRadius={0}
+                    label={renderCustomizedLabel}
+                    labelLine={false}
                     >
                         {expenseData.map((entry, index) => (
                             <Cell key={`cell-${index}`} fill={entry.color} />

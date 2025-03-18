@@ -50,7 +50,7 @@ export default function SignIn() {
                 </div>
                 <button className='my-5 px-5 py-2 bg-mainBgColor text-white text-sm font-medium rounded-lg cursor-pointer transition-all ease-linear border-2 border-mainBgColor hover:bg-backgroundSecondary hover:text-mainBgColor' type="submit" disabled={!isValid}>Submit</button>
                 <div>
-                    <span className='text-xs font-medium'>Don't have an account? <Link href="/auth/signup" className='text-mainBgColor text-xs font-semibold'>Sign Up</Link></span>
+                    <span className='text-xs font-medium'>Don&apos;t have an account? <Link href="/auth/signup" className='text-mainBgColor text-xs font-semibold'>Sign Up</Link></span>
                 </div>
             </form>
         </div>
