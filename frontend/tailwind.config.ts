@@ -14,7 +14,7 @@ export default {
         mainBgColor: "var(--main-bg-color)",
         borderColor: "var(--border-color)",
         foreground: "var(--foreground)",
-        secondColor: "var(--second-color)",
+        secondColor: "var(--secondary-color)",
         blackColor: "var(--black-color)", 
         inputColor: "var(--input-color)",
         outputColor: "var(--output-color)",

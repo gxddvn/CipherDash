@@ -1,11 +1,11 @@
 "use client";
 
-import { signUpInterface } from '@/app/interfaces';
 import { notifyError } from '@/app/notifications';
 import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { ToastContainer } from 'react-toastify';
+import { signUpInterface } from './signup.types';
 
 export default function SignUp() {
     const {
@@ -25,7 +25,6 @@ export default function SignUp() {
 
     const onSubmit = (data: signUpInterface) => {
         console.log(data);
-        // Здесь вы можете отправить данные на сервер
         if (data.password !== data.passwordConfirm) {
 
         }

@@ -1,5 +1,5 @@
 import { EllipsisHorizontal } from "../icons";
-import Charts from "./charts";
+import Charts from "../../components/Charts/charts";
 
 
 export default function Dashboard () {

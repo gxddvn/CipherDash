@@ -1,49 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
+  height: 8px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-  background: white;;
+  background: var(--background);
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--main-bg-color); 
+  background: var(--main-bg-color);
   border-radius: 50px;
+  transition: background 0.2s ease-in-out;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--foreground); 
+  background: var(--foreground);
 }
-
 
 :root {
   --background: #F5F7FA;
   --background-side: #FFFFFF;
   --border-color: #E6EFF5;
   --main-bg-color: #1814F3;
-  --second-color: #B1B1B1;
+  --secondary-color: #B1B1B1;
   --black-color: #232323;
   --input-color: #41D4A8;
   --output-color: #FF4B4A;
   --no-focus-color: #718EBF;
-  /* --foreground: #171717; */
   --foreground: #343C6A;
+
+  --font-size-base: 16px;
+  --font-family-base: 'Montserrat', sans-serif;
 }
-/* 
-@media (prefers-color-scheme: dark) {
+
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0A0A0A;
+    --background-side: #121212;
+    --border-color: #333;
+    --main-bg-color: #1E1EFC;
+    --secondary-color: #888;
+    --black-color: #E0E0E0;
+    --foreground: #EDEDED;
   }
 } */
 
@@ -51,46 +55,124 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* user-select: none; */ 
-  /* font-size: clamp(0.5rem, 1vw + 1em, 3rem) ; */
-  font-size: clamp(0.5rem, 1.2vw, 3rem) ;
-  /* font-size: clamp(0.75rem, 1vw, 1.5rem); */
+  font-size: clamp(0.75rem, 1vw, 1.25rem);
 }
 
-tspan, text, .recharts-default-tooltip p, .recharts-default-tooltip span {
-  font-size: 0.8rem;
-  font-weight: 600;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-family-base);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* a:hover {
+  color: var(--foreground);
+} */
+
+/* button, .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: var(--main-bg-color);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+} */
+
+/* button:hover, .btn:hover {
+  background: var(--foreground);
+} */
 
 img {
   display: block;
   width: clamp(100px, 50%, 700px);
 }
 
-#root {
-  min-height: 100vh;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
+tspan, text, .recharts-default-tooltip p, .recharts-default-tooltip span {
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  --tw-bg-opacity: 1;
-  --tw-text-opacity: 1;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: "Montserrat", serif;
-  font-optical-sizing: auto;
-  /* font-weight: <weight>; */
-  font-style: normal;
+@media (max-width: 1024px) {
+  :root {
+    --font-size-base: 14px;
+  }
 }
 
-a {
-  text-decoration: none;
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  .btn {
+    font-size: 0.875rem;
+  }
 }
