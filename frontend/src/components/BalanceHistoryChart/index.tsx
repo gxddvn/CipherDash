@@ -26,4 +26,6 @@ const BalanceHistoryChart = React.memo(({ className }: { className?: string }) =
     );
 })
 
+BalanceHistoryChart.displayName = 'BalanceHistoryChart';
+
 export default BalanceHistoryChart;

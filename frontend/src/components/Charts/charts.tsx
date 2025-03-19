@@ -15,4 +15,7 @@ const Charts = React.memo(() => {
         </div>
     );
 });
+
+Charts.displayName = 'Charts';
+
 export default Charts;

@@ -1,7 +1,7 @@
 import { SignIn } from '@/app/icons'
 import React from 'react'
 
-const Header = () => {
+const Header = React.memo(() => {
     return (
         <div className='flex justify-between items-center py-4 px-8 bg-backgroundSecondary border-b-2 border-borderColor'>
             <div className='text-lg font-bold'>CipherDash</div>
@@ -11,6 +11,8 @@ const Header = () => {
             </div>
         </div>
     )
-}
+})
+
+Header.displayName = 'Header'
 
 export default Header

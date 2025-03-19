@@ -12,4 +12,6 @@ const BalanceChart = React.memo(({className}: {className?: string}) => {
     );
 })
 
+BalanceChart.displayName = 'BalanceChart';
+
 export default BalanceChart;

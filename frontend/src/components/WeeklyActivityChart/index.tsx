@@ -1,5 +1,6 @@
 "use-client";
 
+import React from 'react';
 import { BarChart, Bar, XAxis, Tooltip, ResponsiveContainer, Rectangle } from 'recharts';
 
 const data = [
@@ -22,7 +23,7 @@ interface CustomBarInterface {
     } | undefined
 }
 
-const CustomBar = ({ x, y, width, height, payload }: CustomBarInterface) => {
+const CustomBar = React.memo(({ x, y, width, height, payload }: CustomBarInterface) => {
     const fillColor = (payload?.withdraw ?? 0) >= 0 ? "#41D4A8" : "#FF4B4A";
 
     return (
@@ -37,9 +38,11 @@ const CustomBar = ({ x, y, width, height, payload }: CustomBarInterface) => {
             ry={8}
         />
     );
-};
+});
 
-const WeeklyActivityChart = ({ className, style }: { className?: string, style?: React.CSSProperties }) => {
+CustomBar.displayName = "CustomBar"
+
+const WeeklyActivityChart = React.memo(({ className, style }: { className?: string, style?: React.CSSProperties }) => {
     return (
         <div className={className} style={style}>
             <ResponsiveContainer width="100%" height="100%">
@@ -56,6 +59,8 @@ const WeeklyActivityChart = ({ className, style }: { className?: string, style?:
             </ResponsiveContainer>
         </div>
     );
-};
+});
+
+WeeklyActivityChart.displayName = "WeeklyActivityChart"
 
 export default WeeklyActivityChart;

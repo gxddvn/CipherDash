@@ -19,4 +19,6 @@ const DashboardNav = React.memo(() => {
     )
 })
 
+DashboardNav.displayName = 'DashboardNav';
+
 export default DashboardNav

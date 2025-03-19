@@ -14,4 +14,6 @@ const NavItems = React.memo(({href, title, children} : {href?: string, title: st
     )
 })
 
+NavItems.displayName = 'NavItems';
+
 export default NavItems

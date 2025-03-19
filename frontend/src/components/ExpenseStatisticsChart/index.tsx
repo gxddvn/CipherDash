@@ -1,3 +1,4 @@
+import React from 'react';
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts';
 
 const expenseData = [
@@ -8,7 +9,7 @@ const expenseData = [
 ];
 
 const RADIAN = Math.PI / 180;
-const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent }: { cx: number, cy: number, midAngle: number, innerRadius: number, outerRadius: number, percent: number }) => {
+const renderCustomizedLabel = React.memo(({ cx, cy, midAngle, innerRadius, outerRadius, percent }: { cx: number, cy: number, midAngle: number, innerRadius: number, outerRadius: number, percent: number }) => {
     const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
     const x = cx + radius * Math.cos(-midAngle * RADIAN);
     const y = cy + radius * Math.sin(-midAngle * RADIAN);
@@ -18,9 +19,11 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
         {`${(percent * 100).toFixed(0)}%`}
         </text>
     );
-};
+});
 
-const ExpenseStatisticsChart = ({ className }: { className?: string }) => {
+renderCustomizedLabel.displayName = 'renderCustomizedLabel'
+
+const ExpenseStatisticsChart = React.memo(({ className }: { className?: string }) => {
     return (
         <div className={className}>
             <ResponsiveContainer width="100%" height="100%">
@@ -45,6 +48,8 @@ const ExpenseStatisticsChart = ({ className }: { className?: string }) => {
             </ResponsiveContainer>
         </div>
     );
-};
+});
+
+ExpenseStatisticsChart.displayName = 'ExpenseStatisticsChart'
 
 export default ExpenseStatisticsChart;
