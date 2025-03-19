@@ -1,0 +1,42 @@
+[
+    {
+        "id": "dashboard",
+        "title": "Dashboard",
+        "path": "/dashboard"
+    },
+    {
+        "id": "wallets",
+        "title": "Wallets",
+        "path": "/dashboard/wallets"
+    },
+    {
+        "id": "transactions",
+        "title": "Transactions",
+        "path": "/dashboard/transactions"
+    },
+    {
+        "id": "ai-analytics",
+        "title": "AI Analytics",
+        "path": ""
+    },
+    {
+        "id": "trading-bot",
+        "title": "Trading Bot",
+        "path": ""
+    },
+    {
+        "id": "alerts-notifications",
+        "title": "Alerts & Notifications",
+        "path": ""
+    },
+    {
+        "id": "subscriptions",
+        "title": "Subscriptions",
+        "path": ""
+    },
+    {
+        "id": "settings",
+        "title": "Settings",
+        "path": "/dashboard/settings"
+    }
+]

@@ -1,9 +1,9 @@
 "use client";
 
-import { signInInterface } from '@/app/interfaces';
 import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { signInInterface } from './signin.types';
 
 export default function SignIn() {
     const {
@@ -21,7 +21,6 @@ export default function SignIn() {
 
     const onSubmit = (data: signInInterface) => {
         console.log(data);
-        // Здесь вы можете отправить данные на сервер
 
         reset();
     };

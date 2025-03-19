@@ -1,4 +1,4 @@
-import WeeklyChart from "../weeklyChart";
+import WeeklyChart from "../../../components/WeeklyChart/weeklyChart";
 
 const convertWalletAddress = (address: string) => {
     return address.slice(0, 6) + "..." + address.slice(-4);

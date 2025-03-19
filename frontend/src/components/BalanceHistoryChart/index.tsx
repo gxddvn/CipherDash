@@ -1,3 +1,4 @@
+import React from 'react';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
 const balanceData = [
@@ -10,7 +11,7 @@ const balanceData = [
     { month: 'Jan', balance: 750 },
 ];
 
-const BalanceHistoryChart = ({ className }: { className?: string }) => {
+const BalanceHistoryChart = React.memo(({ className }: { className?: string }) => {
     return (
         <div className={className}>
             <ResponsiveContainer width="100%" height="100%">
@@ -23,6 +24,8 @@ const BalanceHistoryChart = ({ className }: { className?: string }) => {
             </ResponsiveContainer>
         </div>  
     );
-};
+})
+
+BalanceHistoryChart.displayName = 'BalanceHistoryChart';
 
 export default BalanceHistoryChart;
