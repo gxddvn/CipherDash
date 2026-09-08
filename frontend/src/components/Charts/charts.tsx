@@ -9,8 +9,8 @@ import React from "react";
 const Charts = React.memo(() => {
     return (
         <div className="flex justify-between pt-5">
-            <WeeklyChart className="bg-backgroundSecondary mr-5 p-5 rounded-md shadow" wei="500px" hei="180px" />
-            <ExpenseChart className="bg-backgroundSecondary mr-5 p-5 rounded-md shadow"/>
+            <WeeklyChart className="bg-backgroundSecondary mr-5 p-5 rounded-md shadow" wei="400px" hei="180px" />
+            <ExpenseChart className="bg-backgroundSecondary mr-5 p-5 rounded-md shadow min-w-[220px]"/>
             <BalanceChart className="bg-backgroundSecondary p-5 rounded-md shadow "/>
         </div>
     );
